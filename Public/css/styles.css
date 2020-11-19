@@ -1,0 +1,34 @@
+:root {
+  --bedroom1-color: #e91e63;
+  --bedroom2-color: #ff9800;
+  --livingroom-color: #8bc34a;
+  --bathroom-color: #03a9f4;
+  --kitchen-color: #00bcd4;
+}
+
+.room-view > .mdl-card__title {
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.bedroom1-card > .mdl-card__title {
+  background: var(--bedroom1-color);
+}
+.bedroom2-card > .mdl-card__title {
+  background: var(--bedroom2-color);
+}
+.livingroom-card > .mdl-card__title {
+  background: var(--livingroom-color);
+}
+.bathroom-card > .mdl-card__title {
+  background: var(--bathroom-color);
+}
+.kitchen-card > .mdl-card__title {
+  background: var(--kitchen-color);
+}
+
+.page-content {
+  display: flex;
+  justify-content: center;
+  padding-top: 70px;
+}
