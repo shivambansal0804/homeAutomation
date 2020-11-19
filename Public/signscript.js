@@ -21,7 +21,7 @@ $('#in_submit').click(()=>{
 	var passw = $('#in_password').val();
 	var usname = $('#in_username').val();
 	if(usname == 'shivam'&& passw == '1234'){
-	$(location).attr('href','dashBoard.html');
+	$(location).attr('href','https://dtu-home-automation.herokuapp.com/dashBoard.html');
 	}
 	else{
 		console.log(passw);
