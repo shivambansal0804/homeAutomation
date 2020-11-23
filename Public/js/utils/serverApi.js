@@ -61,13 +61,13 @@ var serverApi = {
       var temp = value;
       if(isNaN(value)){
       alert(" value added is not a number");
-      value = temp;
+      value = 21;
       }
       else{
-      if(value > 50 || value<10){
+      if(value > 40 || value<10){
         //value = 40;
         alert(" critical temerature : health hazard... " );
-        value = temp;
+        value = 21;
         // console.log(" ");
         // console.log(" ");
         // console.log(" fire department notified  ");
