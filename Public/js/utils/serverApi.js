@@ -30,6 +30,7 @@ var serverApi = {
   /* -------------------- Fake Server HTTP/GET Requests ----------------- */
 
   getRoomList: function() {
+
     return $.Deferred().resolve(Object.keys(serverApi.data));
   },
 
@@ -42,6 +43,9 @@ var serverApi = {
   },
 
   getRoomTemperature: function(roomName) {
+    if(serverApi.data[roomName]['temperature'] > 40){
+    console.alert-danger(" critical temerature");
+    }
     return $.Deferred().resolve(serverApi.data[roomName]['temperature']);
   },
 
@@ -50,6 +54,30 @@ var serverApi = {
   changeRoomProperty(roomName, roomProperty, value) {
     serverApi.data[roomName][roomProperty] = value;
 
+    if(roomProperty!= "temperature"){
+    console.log("user shivam changed "+ roomName + "'s "+ roomProperty + " to "+ value);
+    }
+    else{
+      var temp = value;
+      if(isNaN(value)){
+      alert(" value added is not a number");
+      value = temp;
+      }
+      else{
+      if(value > 50 || value<10){
+        //value = 40;
+        alert(" critical temerature : health hazard... " );
+        value = temp;
+        // console.log(" ");
+        // console.log(" ");
+        // console.log(" fire department notified  ");
+        // console.log(" ");
+        }
+        else{
+          console.log("user shivam changed "+ roomName + "'s "+ roomProperty + " to "+ value);
+        }
+      }
+    }
     return $.Deferred().resolve(value);
   }
 };
